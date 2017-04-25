@@ -23,6 +23,7 @@ map <LocalLeader>e :Explore<CR>
 map <Leader>v :vsplit<CR>
 map <Leader>h :split<CR>
 imap <Leader>b import pdb; pdb.set_trace()
+map <Leader>y :%y+<CR>
 
 " Tabs shortcuts
 nnoremap <LocalLeader>n :tab split<CR>
@@ -90,7 +91,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 nmap <leader>gp :silent Ggrep<space>
 nmap <leader>gg :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
 nmap <leader>gs :silent Gstatus<CR>
-nmap <leader>gb Gblame<CR>
+nmap <leader>gb :Gblame<CR>
 
 " flake8
 let g:flake8_show_quickfix=0
